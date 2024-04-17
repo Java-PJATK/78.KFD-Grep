@@ -16,14 +16,18 @@ itself also throw an exception).
 ## KFD-Grep: Understanding java.io Package
 Unlike the java.nio package, KFD-Grep utilizes the older but still essential java.io package.
   
-**Key Differences:  
-**Class File: Serves a similar purpose to the Path class from java.nio.file, representing files within the file system.  
-BufferedReader Creation: It requires a two-step process:  
+Key Differences:  
+  
+Class File:   
+Serves a similar purpose to the Path class from java.nio.file, representing files within the file system.  
+BufferedReader  
+  
+Creation: It requires a two-step process:  
 Create a ‘raw’ byte stream, such as FileInputStream.  
 Pass it to InputStreamReader with the required encoding, and then to BufferedReader.  
   
-**Example Breakdown:  
-**In the given example, BufferedReader is created by directly passing a FileReader object, which does not allow specifying the encoding; thus, the system’s default encoding is used.  
-
-**Try-With-Resources:  
-**This Java feature simplifies IO stream operations by automatically closing resources, eliminating the need for a complex finally clause that handles resource closure and potential exceptions.
+Example Breakdown:  
+In the given example, BufferedReader is created by directly passing a FileReader object, which does not allow specifying the encoding; thus, the system’s default encoding is used.  
+  
+Try-With-Resources:  
+This Java feature simplifies IO stream operations by automatically closing resources, eliminating the need for a complex finally clause that handles resource closure and potential exceptions.
